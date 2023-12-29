@@ -1,9 +1,10 @@
 <script>
-  
+  import Router from 'svelte-spa-router'
+  import { routes } from './router';
 </script>
 
 <main>
-  svelte content
+  <Router {routes} />
 </main>
 
 <style>

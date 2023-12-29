@@ -7,7 +7,7 @@ function SveltePage() {
         name="svelte-app"
         url="http://localhost:5003/"
         iframe
-        baseroute="/svelte/"
+        baseroute="/svelte"
       ></micro-app>
     </div>
   );

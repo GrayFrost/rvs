@@ -7,7 +7,7 @@ function ReactPage() {
         name="react-app"
         url="http://localhost:5001/"
         iframe
-        baseroute="/react/"
+        baseroute="/react"
       ></micro-app>
     </div>
   );

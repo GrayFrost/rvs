@@ -3,9 +3,5 @@
 </script>
 
 <template>
-  <div>vue content</div>
+  <router-view></router-view>
 </template>
-
-<style scoped>
-
-</style>

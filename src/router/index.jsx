@@ -2,7 +2,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from '../Home.jsx';
+import Layout from '../Layout.jsx';
 import ReactPage from '../pages/React.jsx';
 import VuePage from '../pages/Vue.jsx';
 import SveltePage from '../pages/Svelte.jsx';
@@ -10,19 +10,19 @@ import SveltePage from '../pages/Svelte.jsx';
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: Home,
+    Component: Layout,
     children: [
       {
-        path: 'react',
-        element: ReactPage,
+        path: 'react/:chapter',
+        Component: ReactPage,
       },
       {
-        path: 'vue',
-        element: VuePage,
+        path: 'vue/:chapter',
+        Component: VuePage,
       },
       {
-        path: 'svelte',
-        element: SveltePage,
+        path: 'svelte/:chapter',
+        Component: SveltePage,
       }
     ]
   }
