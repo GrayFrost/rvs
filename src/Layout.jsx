@@ -20,17 +20,23 @@ export default function Layout() {
     const newPath = `/${type}/${chapter}`;
     navigate(newPath);
   };
+
+  const gotoChapter = (chapter) => {
+    const [ui] = location.pathname.split('/').filter(Boolean);
+    const newPath = `/${ui || 'react'}/${chapter}`;
+    navigate(newPath);
+  }
   return (
     <div className="rvs flex">
       <div className="sidebar">
-        <div>
-          <Link to="/react/one">one</Link>
+        <div onClick={() => gotoChapter('one')}>
+          one
         </div>
-        <div>
-          <Link to="/react/two">two</Link>
+        <div onClick={() => gotoChapter('two')}>
+          two
         </div>
-        <div>
-          <Link to="/react/three">three</Link>
+        <div onClick={() => gotoChapter('three')}>
+          three
         </div>
       </div>
       <div className="content">

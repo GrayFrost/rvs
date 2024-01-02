@@ -4,7 +4,7 @@ function VuePage() {
   return (
     <div>
       <micro-app
-        name="vue-app"
+        name="vue"
         url="http://localhost:5002/"
         iframe
         baseroute="/vue"

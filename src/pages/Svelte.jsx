@@ -4,7 +4,7 @@ function SveltePage() {
   return (
     <div>
       <micro-app
-        name="svelte-app"
+        name="svelte"
         url="http://localhost:5003/"
         iframe
         baseroute="/svelte"

@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import OnePage from '../pages/One.vue';
 import TwoPage from '../pages/Two.vue';
 import ThreePage from '../pages/Three.vue';
@@ -19,6 +19,6 @@ const routes = [
 ]
 
 export const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(window.__MICRO_APP_BASE_ROUTE__),
   routes: routes
 });
