@@ -1,6 +1,8 @@
 import React from "react";
+import { useReload } from '../utils';
 
 function SveltePage() {
+  useReload();
   return (
     <div>
       <micro-app

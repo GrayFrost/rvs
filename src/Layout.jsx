@@ -30,14 +30,18 @@ export default function Layout() {
     <div className="rvs flex">
       <div className="sidebar">
         <div onClick={() => gotoChapter('one')}>
-          one
+          1.state
         </div>
         <div onClick={() => gotoChapter('two')}>
-          two
+          2.function
         </div>
         <div onClick={() => gotoChapter('three')}>
-          three
+          3.props
         </div>
+        <div>4.slot</div>
+        <div>5.ref</div>
+        <div>6.style</div>
+        <div>7.context</div>
       </div>
       <div className="content">
         <div className="tab flex">

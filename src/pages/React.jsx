@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useReload } from '../utils';
 
 function ReactPage() {
+  useReload();
   return (
     <div>
       <micro-app
