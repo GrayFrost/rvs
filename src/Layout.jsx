@@ -1,12 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Outlet, useNavigate, useParams, useLocation } from "react-router-dom";
 import microApp from '@micro-zoe/micro-app'
+import hljs from 'highlight.js';
+import javascript from 'highlight.js/lib/languages/javascript';
+hljs.registerLanguage('javascript', javascript);
 
 export default function Layout() {
+  
   const params = useParams();
 
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [code, setCode] = useState('');
 
   const gotoPage = (type) => {
     const { chapter } = params;
@@ -21,9 +27,19 @@ export default function Layout() {
   };
 
   useEffect(() => {
-    microApp.addDataListener('react', (data) => {
-      console.log('zzh 接收数据');
-      console.log('来自子应用react的数据', data);
+    microApp.addDataListener('react', (res) => {
+      console.log('来自子应用react的数据', res);
+      setCode(res.data);
+    });
+
+    microApp.addDataListener('vue', (res) => {
+      console.log('来自子应用vue的数据', res);
+      setCode(res.data);
+    });
+
+    microApp.addDataListener('svelte', (res) => {
+      console.log('来自子应用svelte的数据', res);
+      setCode(res.data);
     });
   }, []);
 
@@ -60,9 +76,15 @@ export default function Layout() {
             svelte
           </div>
         </div>
-        <div>
-          <Outlet />
+        <div className="flex w-full">
+          <div className="flex-1">
+          <Outlet/>
+          </div>
+          <pre className="w-[550px]">
+            <code className="language-javascript">{code}</code>
+          </pre>   
         </div>
+
       </div>
     </div>
   );

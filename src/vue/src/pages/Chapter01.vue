@@ -7,5 +7,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { vueCode } from '../../../code/Chapter01';
+
 const count = ref(0);
+
+window.microApp.dispatch({ data: vueCode });
 </script>
