@@ -7,7 +7,12 @@ function Child(props) {
   return (
     <div>
       <span>name: {props.name}</span>
-      <button onClick={onClickFunc}>调用父级方法</button>
+      <button
+        className="w-[120px] h-10 rounded-sm flex items-center justify-center border"
+        onClick={onClickFunc}
+      >
+        调用父级方法
+      </button>
     </div>
   );
 }
