@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "../Layout.jsx";
-import OnePage from "../pages/One.jsx";
-import TwoPage from "../pages/Two.jsx";
-import ThreePage from "../pages/Three.jsx";
+import Chapter01 from "../pages/Chapter01.jsx";
+import Chapter02 from "../pages/Chapter02.jsx";
+import Chapter03 from "../pages/Chapter03.jsx";
+import Chapter04 from "../pages/Chapter04.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -10,17 +11,21 @@ export const router = createBrowserRouter([
     Component: Layout,
     children: [
       {
-        path: "/one",
-        Component: OnePage,
+        path: "/chapter01",
+        Component: Chapter01,
       },
       {
-        path: "/two",
-        Component: TwoPage,
+        path: "/chapter02",
+        Component: Chapter02,
       },
       {
-        path: "/three",
-        Component: ThreePage,
+        path: "/chapter03",
+        Component: Chapter03,
       },
+      {
+        path: "/chapter04",
+        Component: Chapter04,
+      }
     ],
   },
 ], {

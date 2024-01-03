@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <h1 class="text-sky-400">第一章 —— 变量</h1>
+  <section>
+    <h1>第一章 —— 变量</h1>
     <div>变量：{{ count }}</div>
-  </div>
+  </section>
 </template>
 
 <script setup>

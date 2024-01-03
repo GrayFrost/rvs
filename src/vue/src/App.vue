@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <router-view></router-view>
+  <router-view class="text-vue"></router-view>
 </template>

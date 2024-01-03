@@ -7,7 +7,6 @@ export default function Layout() {
 
   const navigate = useNavigate();
   const location = useLocation();
-  console.log("zzh params", params, location);
 
   const gotoPage = (type) => {
     const { chapter } = params;
@@ -17,7 +16,7 @@ export default function Layout() {
 
   const gotoChapter = (chapter) => {
     const [ui] = location.pathname.split("/").filter(Boolean);
-    const newPath = `/${ui || "react"}/${chapter}`;
+    const newPath = `/${ui || "react"}/chapter${chapter}`;
     navigate(newPath);
   };
 
@@ -31,9 +30,10 @@ export default function Layout() {
   return (
     <div className="w-full h-full flex flex-row">
       <div className="w-[200px]">
-        <div onClick={() => gotoChapter("one")}>1.state</div>
-        <div onClick={() => gotoChapter("two")}>2.function</div>
-        <div onClick={() => gotoChapter("three")}>3.props</div>
+        <div onClick={() => gotoChapter("01")}>1.state</div>
+        <div onClick={() => gotoChapter("02")}>2.function</div>
+        <div onClick={() => gotoChapter("03")}>3.props</div>
+        <div onClick={() => gotoChapter('04')}>4.lifecircle</div>
         <div>4.slot</div>
         <div>5.ref</div>
         <div>6.style</div>

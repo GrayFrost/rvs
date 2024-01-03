@@ -1,20 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import OnePage from '../pages/One.vue';
-import TwoPage from '../pages/Two.vue';
-import ThreePage from '../pages/Three.vue';
+import Chapter01 from '../pages/Chapter01.vue';
+import Chapter02 from '../pages/Chapter02.vue';
+import Chapter03 from '../pages/Chapter03.vue';
+import Chapter04 from '../pages/Chapter04.vue';
 
 const routes = [
   {
-    path: '/one',
-    component: OnePage,
+    path: '/chapter01',
+    component: Chapter01,
   },
   {
-    path: '/two',
-    component: TwoPage
+    path: '/chapter02',
+    component: Chapter02
   },
   {
-    path: '/three',
-    component: ThreePage
+    path: '/chapter03',
+    component: Chapter03
+  },
+  {
+    path: '/chapter04',
+    component: Chapter04
   }
 ]
 

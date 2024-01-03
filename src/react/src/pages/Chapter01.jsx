@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-export default function One() {
+
+export default function Chapter01() {
   const [count] = useState(0);
 
   useEffect(() => {
@@ -8,9 +9,9 @@ export default function One() {
   }, [])
 
   return (
-    <div>
-      <h1 className="text-rose-400">第一章 —— 变量</h1>
+    <section>
+      <h1>第一章 —— 数据绑定</h1>
       <div>变量：{count}</div>
-    </div>
+    </section>
   );
 }
