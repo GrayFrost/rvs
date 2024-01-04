@@ -2,7 +2,7 @@ import React from "react";
 import { useReload } from '../utils';
 
 function SveltePage() {
-  useReload();
+  // useReload();
   return (
     <div>
       <micro-app

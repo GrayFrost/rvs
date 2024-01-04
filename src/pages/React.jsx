@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useReload } from '../utils';
 
 function ReactPage() {
-  useReload();
+  // useReload();
   return (
     <div>
       <micro-app

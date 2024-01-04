@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from "react-router-dom";
-import microApp from "@micro-zoe/micro-app";
+import microApp, { getActiveApps, preFetch } from "@micro-zoe/micro-app";
 
 export const useReload = () => {
   const location = useLocation();
@@ -8,6 +8,7 @@ export const useReload = () => {
   const [ui, chapter] = location.pathname.split("/").filter(Boolean);
 
   useEffect(() => {
+    console.log('zzh activeapps', getActiveApps());
     microApp.reload(ui).then((result) => {
       if (result) {
         console.log("重新渲染成功");

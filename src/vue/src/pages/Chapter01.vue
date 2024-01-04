@@ -6,10 +6,18 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
+import { ref, watch } from 'vue';
 import { vueCode } from '../../../code/Chapter01';
 
 const count = ref(0);
+const route = useRoute();
+const router = useRouter();
+console.log('zzh route', route, router);
 
-window.microApp.dispatch({ data: vueCode });
+watch(() => route.path, () => {
+  console.log('zzh route watch');
+  window.microApp.dispatch({ data: vueCode });
+})
+
 </script>

@@ -2,7 +2,7 @@ import React from "react";
 import { useReload } from '../utils';
 
 function VuePage() {
-  useReload();
+  // useReload();
   return (
     <div>
       <micro-app
