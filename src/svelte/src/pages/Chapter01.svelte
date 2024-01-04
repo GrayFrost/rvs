@@ -1,8 +1,11 @@
 <script>
+  import { onMount } from 'svelte';
   import { svelteCode } from '../../../code/Chapter01';
   let count = 0;
 
-  window.microApp.dispatch({ data: svelteCode });
+  onMount(() => {
+    window.microApp.dispatch({ data: svelteCode });
+  });
 </script>
 
 <section>

@@ -2,6 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css';
 import App from './App.jsx'
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import js from 'react-syntax-highlighter/dist/esm/languages/hljs/javascript';
+
+SyntaxHighlighter.registerLanguage('javascript', js);
 
 import microApp from '@micro-zoe/micro-app'
 

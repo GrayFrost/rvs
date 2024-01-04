@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useNavigate, useParams, useLocation } from "react-router-dom";
 import microApp from '@micro-zoe/micro-app'
-import hljs from 'highlight.js';
-import javascript from 'highlight.js/lib/languages/javascript';
-hljs.registerLanguage('javascript', javascript);
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function Layout() {
   
@@ -28,19 +28,24 @@ export default function Layout() {
 
   useEffect(() => {
     microApp.addDataListener('react', (res) => {
-      console.log('来自子应用react的数据', res);
+      console.log('zzh 来自子应用react的数据', res);
       setCode(res.data);
     });
 
     microApp.addDataListener('vue', (res) => {
-      console.log('来自子应用vue的数据', res);
+      console.log('zzh 来自子应用vue的数据', res);
       setCode(res.data);
     });
 
     microApp.addDataListener('svelte', (res) => {
-      console.log('来自子应用svelte的数据', res);
+      console.log('zzh 来自子应用svelte的数据', res);
       setCode(res.data);
     });
+    return () => {
+      microApp.clearDataListener('react');
+      microApp.clearDataListener('vue');
+      microApp.clearDataListener('svelte');
+    }
   }, []);
 
   return (
@@ -80,9 +85,12 @@ export default function Layout() {
           <div className="flex-1">
           <Outlet/>
           </div>
-          <pre className="w-[550px]">
+          {/* <pre className="w-[550px]">
             <code className="language-javascript">{code}</code>
-          </pre>   
+          </pre>    */}
+          <SyntaxHighlighter language="javascript" style={docco}>
+            {code}
+          </SyntaxHighlighter>
         </div>
 
       </div>

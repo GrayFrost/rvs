@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 import { reactCode } from '../../../code/Chapter01';
 
 export default function Chapter01() {
+  const location = useLocation();
   const [count] = useState(0);
 
   useEffect(() => {
     window.microApp.dispatch({ data: reactCode });
-  }, [])
+  }, [location.pathname]);
 
   return (
     <section>
