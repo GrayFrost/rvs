@@ -8,21 +8,24 @@ import {
 
 import './style.css';
 
-const app = createApp(App).use(router);
-let container;
-function render(containerId) {
-  container = containerId;
+let app;
+
+function render(container) {
+  app = createApp(App);
+  app.use(router);
+  
   app.mount(container);
 }
 
 const initQianKun = () => {
   renderWithQiankun({
     mount(props) {
-      render('#root');
+      console.log('zzh container', props);
+      render(props.container ? props.container.querySelector('#vue-app') : '#vue-app');
     },
     bootstrap() {},
     unmount() {
-      app.unmount(container);
+      app.unmount();
     }
   })
 }
