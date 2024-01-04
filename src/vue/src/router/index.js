@@ -3,6 +3,7 @@ import Chapter01 from '../pages/Chapter01.vue';
 import Chapter02 from '../pages/Chapter02.vue';
 import Chapter03 from '../pages/Chapter03.vue';
 import Chapter04 from '../pages/Chapter04.vue';
+import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
 
 const routes = [
   {
@@ -24,6 +25,6 @@ const routes = [
 ]
 
 export const router = createRouter({
-  history: createWebHistory(window.__MICRO_APP_BASE_ROUTE__),
+  history: createWebHistory(qiankunWindow.__POWERED_BY_QIANKUN__ ? '/vue/' : '/'),
   routes: routes
 });

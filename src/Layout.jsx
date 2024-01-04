@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Outlet, useNavigate, useParams, useLocation } from "react-router-dom";
-import microApp from "@micro-zoe/micro-app";
+
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -60,24 +60,9 @@ export default function Layout() {
   };
 
   useEffect(() => {
-    microApp.addDataListener("react", (res) => {
-      console.log("zzh 来自子应用react的数据", res);
-      setCode(res.data);
-    });
-
-    microApp.addDataListener("vue", (res) => {
-      console.log("zzh 来自子应用vue的数据", res);
-      setCode(res.data);
-    });
-
-    microApp.addDataListener("svelte", (res) => {
-      console.log("zzh 来自子应用svelte的数据", res);
-      setCode(res.data);
-    });
+    // 接收子应用数据
     return () => {
-      microApp.clearDataListener("react");
-      microApp.clearDataListener("vue");
-      microApp.clearDataListener("svelte");
+
     };
   }, []);
 

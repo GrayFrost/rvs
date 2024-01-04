@@ -4,6 +4,7 @@ import Chapter01 from "../pages/Chapter01.jsx";
 import Chapter02 from "../pages/Chapter02.jsx";
 import Chapter03 from "../pages/Chapter03.jsx";
 import Chapter04 from "../pages/Chapter04.jsx";
+import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
 
 export const router = createBrowserRouter([
   {
@@ -29,5 +30,5 @@ export const router = createBrowserRouter([
     ],
   },
 ], {
-  basename: window.__MICRO_APP_BASE_ROUTE__
+  basename: qiankunWindow.__POWERED_BY_QIANKUN__ ? '/react' : ''
 });

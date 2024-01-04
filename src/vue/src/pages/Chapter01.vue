@@ -17,7 +17,7 @@ console.log('zzh route', route, router);
 
 watch(() => route.path, () => {
   console.log('zzh route watch');
-  window.microApp.dispatch({ data: vueCode });
+  // todo 发数据
 })
 
 </script>

@@ -7,7 +7,7 @@ export default function Chapter01() {
   const [count] = useState(0);
 
   useEffect(() => {
-    window.microApp.dispatch({ data: reactCode });
+    // todo 发数据
   }, [location.pathname]);
 
   return (

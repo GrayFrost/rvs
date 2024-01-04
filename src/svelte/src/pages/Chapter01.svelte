@@ -4,7 +4,7 @@
   let count = 0;
 
   onMount(() => {
-    window.microApp.dispatch({ data: svelteCode });
+    // todo 发数据
   });
 </script>
 
