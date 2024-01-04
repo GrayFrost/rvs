@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
+import { reactCode } from '../../../code/Chapter01';
 
 export default function Chapter01() {
   const [count] = useState(0);
 
   useEffect(() => {
-    console.log('zzh 发送数据');
-    window.microApp.dispatch({data: 'react第一章数据'});
+    window.microApp.dispatch({ data: reactCode });
   }, [])
 
   return (
