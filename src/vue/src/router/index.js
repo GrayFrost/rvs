@@ -7,6 +7,7 @@ import Chapter03 from '../pages/Chapter03.vue';
 import Chapter04 from '../pages/Chapter04.vue';
 import Chapter05 from '../pages/Chapter05.vue';
 import Chapter06 from '../pages/Chapter06.vue';
+import Chapter07 from '../pages/Chapter07.vue';
 import Chapter10 from '../pages/Chapter10.vue';
 
 const routes = [
@@ -33,6 +34,10 @@ const routes = [
   {
     path: '/chapter06',
     component: Chapter06
+  },
+  {
+    path: '/chapter07',
+    component: Chapter07
   },
   {
     path: '/chapter10',
