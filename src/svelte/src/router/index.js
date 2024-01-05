@@ -3,6 +3,7 @@ import Chapter02 from '../pages/Chapter02.svelte';
 import Chapter03 from '../pages/Chapter03.svelte';
 import Chapter04 from '../pages/Chapter04.svelte';
 import Chapter05 from '../pages/Chapter05.svelte';
+import Chapter06 from '../pages/Chapter06.svelte';
 
 export const routes = [
   {
@@ -24,5 +25,9 @@ export const routes = [
   {
     path: '/chapter05',
     component: Chapter05,
+  },
+  {
+    path: '/chapter06',
+    component: Chapter06,
   }
 ]

@@ -37,11 +37,27 @@ export default function Layout() {
       name: "ref",
     },
     {
-      chapter: "07",
+      chapter: '07',// todo 提前
+      name: "computed"
+    },
+    {
+      chapter: '08',
+      name: 'watch',
+    },
+    {
+      chapter: '09',
+      name: 'if'
+    },
+    {
+      chapter: '10',
+      name: 'for'
+    },
+    {
+      chapter: "11",
       name: "style",
     },
     {
-      chapter: "08",
+      chapter: "12",
       name: "context",
     },
   ]);

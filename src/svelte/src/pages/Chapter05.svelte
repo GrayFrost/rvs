@@ -3,7 +3,8 @@
   import SlotContainer2 from './Chapter05_Child2.svelte';
 </script>
 
-<div>
+<section>
+  <h1>第五章 —— slot</h1>
   <SlotContainer1>
     hello world
   </SlotContainer1>
@@ -12,4 +13,4 @@
     <span slot="header">父组件header</span>
     <span slot="footer">父组件footer</span>
   </SlotContainer2>
-</div>
+</section>
