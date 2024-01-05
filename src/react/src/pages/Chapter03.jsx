@@ -18,7 +18,7 @@ function Child(props) {
   );
 }
 
-export default function Chapter03() {
+export default function Page() {
   const [name] = useState("hello");
   const sayHello = () => {
     console.log("hello");

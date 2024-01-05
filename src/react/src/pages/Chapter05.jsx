@@ -14,7 +14,7 @@ function SlotContainer2(props) {
   );
 }
 
-export default function Chapter05() {
+export default function Page() {
   return (
     <section>
       <h1>第五章 —— slot</h1>

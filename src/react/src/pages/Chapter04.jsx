@@ -1,6 +1,6 @@
 import { useSendCode } from '../hooks/useSendCode';
 
-export default function Chapter04() {
+export default function Page() {
 
   useSendCode('04');
   

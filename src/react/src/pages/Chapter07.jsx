@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function Chapter07() {
+export default function Page() {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
