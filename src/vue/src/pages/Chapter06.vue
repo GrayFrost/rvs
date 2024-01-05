@@ -1,35 +1,27 @@
 <template>
   <section>
-    <h1>第六章 —— ref</h1>
-      <div ref="fatherRef" class="w-10 h-10 border"></div>
-      <div>className is: {{className}}</div>
-      <button
-        class="w-auto h-auto p-1 flex items-center justify-center border rounded-sm"
-        @click="sayHello"
+    <h1>第六章 —— computed</h1>
+    <button
+        class="w-auto h-auto p-1 border"
+        @click="updateCount"
       >
-        通过ref调用子应用方法
+        +1
       </button>
-      <Child ref="childRef" />
+      <span>
+        {{count}}的2倍是：{{doubleCount}}
+      </span>
   </section>
 </template>
 
 <script setup>
-import { ref, watchEffect } from 'vue';
-import Child from './Chapter06_Child.vue';
-const fatherRef = ref(null);
-const childRef = ref(null);
-let className = ref('');
+import { ref, computed } from 'vue';
 
-watchEffect(() => {
-  if (fatherRef.value) {
-    className.value = fatherRef.value.className;
-  }
-})
+let count = ref(0);
+let doubleCount = computed(() => {
+  return count.value * 2
+});
 
-const sayHello = () => {
-  if (childRef.value) {
-    childRef.value.sayHello();
-  }
+const updateCount = () => {
+  count.value++;
 }
-
 </script>

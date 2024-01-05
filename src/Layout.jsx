@@ -33,24 +33,24 @@ export default function Layout() {
       name: "slot",
     },
     {
-      chapter: "06",
-      name: "ref",
-    },
-    {
-      chapter: '07',// todo 提前
+      chapter: '06',
       name: "computed"
     },
     {
-      chapter: '08',
+      chapter: '07',
       name: 'watch',
     },
     {
-      chapter: '09',
+      chapter: '08',
       name: 'if'
     },
     {
-      chapter: '10',
+      chapter: '9',
       name: 'for'
+    },
+    {
+      chapter: "10",
+      name: "ref",
     },
     {
       chapter: "11",
