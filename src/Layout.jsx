@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
-import { Outlet, useNavigate, useParams, useLocation } from "react-router-dom";
+import {
+  useNavigate,
+  useLocation,
+  useParams,
+  Outlet
+} from 'react-router-dom';
 
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+// import SyntaxHighlighter from "react-syntax-highlighter";
+// import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+// import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Layout() {
   const [navs] = useState([
@@ -68,7 +73,7 @@ export default function Layout() {
 
   return (
     <div className="w-full h-full flex flex-row">
-      <ul className="w-[200px] bg-neutral-800 text-white">
+      <ul className="w-[200px] bg-neutral-800 text-white flex-shrink-0">
         {navs.map((nav, index) => {
           return (
             <li

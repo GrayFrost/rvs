@@ -31,4 +31,4 @@ const initQianKun = () => {
   })
 }
 
-qiankunWindow.__POWERED_BY_QIANKUN__ ? initQianKun() : render(document.getElementById('react-app'));
+qiankunWindow.__POWERED_BY_QIANKUN__ ? initQianKun() : render(document.getElementById('root'));

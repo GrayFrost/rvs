@@ -19,7 +19,6 @@ const initQianKun = () => {
   renderWithQiankun({
     mount(props) {
       const { container } = props
-      console.log('zzh container', [container]);
       render(container)
     },
     bootstrap() {},
@@ -30,6 +29,6 @@ const initQianKun = () => {
   })
 }
 
-qiankunWindow.__POWERED_BY_QIANKUN__ ? initQianKun() : render(document.getElementById('svelte-app'));
+qiankunWindow.__POWERED_BY_QIANKUN__ ? initQianKun() : render(document.getElementById('root'));
 
 export default app;

@@ -20,8 +20,7 @@ function render(container) {
 const initQianKun = () => {
   renderWithQiankun({
     mount(props) {
-      console.log('zzh container', props);
-      render(props.container ? props.container.querySelector('#vue-app') : '#vue-app');
+      render(props.container ? props.container.querySelector('#vue-app') : '#root');
     },
     bootstrap() {},
     unmount() {
@@ -30,4 +29,4 @@ const initQianKun = () => {
   })
 }
 
-qiankunWindow.__POWERED_BY_QIANKUN__ ? initQianKun() : render('#vue-app');
+qiankunWindow.__POWERED_BY_QIANKUN__ ? initQianKun() : render('#root');
