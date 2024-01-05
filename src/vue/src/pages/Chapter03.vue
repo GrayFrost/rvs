@@ -7,10 +7,13 @@
 
 <script setup>
   import { ref } from "vue";
+  import { useSendCode } from '../hooks/useSendCode';
   import Child from "./Chapter03_Child.vue";
   
   const name = ref("hello");
   const sayHello = () => {
     console.log("hello");
   };
+
+  useSendCode('03');
 </script>

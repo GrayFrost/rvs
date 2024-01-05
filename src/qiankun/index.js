@@ -1,4 +1,4 @@
-import { registerMicroApps, start } from 'qiankun'
+import { registerMicroApps, start, initGlobalState } from 'qiankun'
 import { apps } from './config';
 
 export function registerApps() {

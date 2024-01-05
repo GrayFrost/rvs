@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSendCode } from '../hooks/useSendCode';
 
 export default function Chapter02() {
   const [count, setCount] = useState(0);
@@ -6,6 +7,8 @@ export default function Chapter02() {
   const updateCount = () => {
     setCount(count + 1);
   };
+
+  useSendCode('02');
 
   return (
     <section>

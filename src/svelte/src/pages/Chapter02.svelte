@@ -1,9 +1,11 @@
 <script>
+  import { useSendCode } from '../hooks/useSendCode';
   let count = 0;
 
   const updateCount = () => {
     count++;
   }
+  useSendCode('02')
 </script>
 
 <section>

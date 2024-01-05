@@ -20,7 +20,9 @@ function render(container) {
 const initQianKun = () => {
   renderWithQiankun({
     mount(props) {
-      render(props.container ? props.container.querySelector('#vue-app') : '#root');
+      const { container, setGlobalState } = props
+      qiankunWindow.setGlobalState = setGlobalState;
+      render(container ? container.querySelector('#root') : '#root');
     },
     bootstrap() {},
     unmount() {

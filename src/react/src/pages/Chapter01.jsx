@@ -1,14 +1,10 @@
-import { useState, useEffect } from "react";
-import { useLocation } from 'react-router-dom';
-import { reactCode } from '../../../code/Chapter01';
+import { useState } from "react";
+import { useSendCode } from '../hooks/useSendCode';
 
 export default function Chapter01() {
-  const location = useLocation();
   const [count] = useState(0);
 
-  useEffect(() => {
-    // todo 发数据
-  }, [location.pathname]);
+  useSendCode('01');
 
   return (
     <section>

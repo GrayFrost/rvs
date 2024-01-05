@@ -6,18 +6,11 @@
 </template>
 
 <script setup>
-import { useRoute, useRouter } from 'vue-router';
-import { ref, watch } from 'vue';
-import { vueCode } from '../../../code/Chapter01';
+import { ref } from 'vue';
+import { useSendCode } from '../hooks/useSendCode';
 
 const count = ref(0);
-const route = useRoute();
-const router = useRouter();
-console.log('zzh route', route, router);
 
-watch(() => route.path, () => {
-  console.log('zzh route watch');
-  // todo 发数据
-})
+useSendCode('01');
 
 </script>

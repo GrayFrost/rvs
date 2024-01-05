@@ -1,11 +1,8 @@
 <script>
-  import { onMount } from 'svelte';
-  import { svelteCode } from '../../../code/Chapter01';
+  import { useSendCode } from '../hooks/useSendCode';
   let count = 0;
 
-  onMount(() => {
-    // todo 发数据
-  });
+  useSendCode('01');
 </script>
 
 <section>

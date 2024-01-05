@@ -1,10 +1,13 @@
 <script>
+  import { useSendCode } from '../hooks/useSendCode';
   import Child from './Chapter03_Child.svelte';
   let name = 'hello';
 
   const sayHello = () => {
     console.log('hello');
   }
+
+  useSendCode('03');
 </script>
 
 <section>

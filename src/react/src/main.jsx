@@ -21,7 +21,8 @@ function render(container) {
 const initQianKun = () => {
   renderWithQiankun({
     mount(props) {
-      const { container } = props
+      const { container, setGlobalState } = props
+      qiankunWindow.setGlobalState = setGlobalState;
       render(container)
     },
     bootstrap() {},

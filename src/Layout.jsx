@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
-import {
-  useNavigate,
-  useLocation,
-  useParams,
-  Outlet
-} from 'react-router-dom';
-
+import { useNavigate, useLocation, useParams, Outlet } from "react-router-dom";
+import { actions } from "./qiankun/state";
+import { setCode } from "./store/code";
+import { useSelector, useDispatch } from "react-redux";
+import SubNavs from "./components/SubNavs";
 // import SyntaxHighlighter from "react-syntax-highlighter";
 // import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 // import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Layout() {
+  const dispatch = useDispatch();
+  const code = useSelector((state) => state.code.value);
   const [navs] = useState([
     {
       chapter: "01",
@@ -50,14 +50,6 @@ export default function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [code, setCode] = useState("");
-
-  const gotoPage = (type) => {
-    const { chapter } = params;
-    const newPath = `/${type}/${chapter}`;
-    navigate(newPath);
-  };
-
   const gotoChapter = (chapter) => {
     const [ui] = location.pathname.split("/").filter(Boolean);
     const newPath = `/${ui || "react"}/chapter${chapter}`;
@@ -66,8 +58,12 @@ export default function Layout() {
 
   useEffect(() => {
     // 接收子应用数据
+    actions.onGlobalStateChange((newState, prev) => {
+      const { code } = newState;
+      dispatch(setCode(code));
+    });
     return () => {
-
+      actions.offGlobalStateChange();
     };
   }, []);
 
@@ -77,41 +73,26 @@ export default function Layout() {
         {navs.map((nav, index) => {
           return (
             <li
-              className="flex w-full h-12 items-center justify-start px-4 hover:bg-orange-500 hover:text-slate-400 cursor-pointer"
-              onClick={() => gotoChapter(nav.chapter)} key={index}>
+              className={`flex w-full h-12 items-center justify-start px-4 hover:bg-orange-500 hover:text-slate-400 cursor-pointer ${
+                `chapter${nav.chapter}` == params.chapter ? "bg-orange-500" : ""
+              }`}
+              onClick={() => gotoChapter(nav.chapter)}
+              key={index}
+            >
               {index + 1}.{nav.name}
             </li>
           );
         })}
       </ul>
       <div className="flex-1">
-        <div className="flex">
-          <div
-            className="w-20 h-12 flex justify-center items-center rounded-sm bg-react text-white"
-            onClick={() => gotoPage("react")}
-          >
-            react
-          </div>
-          <div
-            className="w-20 h-12 flex justify-center items-center rounded-sm bg-vue text-white"
-            onClick={() => gotoPage("vue")}
-          >
-            vue
-          </div>
-          <div
-            className="w-20 h-12 flex justify-center items-center rounded-sm bg-svelte text-white"
-            onClick={() => gotoPage("svelte")}
-          >
-            svelte
-          </div>
-        </div>
+        <SubNavs />
         <div className="flex w-full">
           <div className="flex-1">
             <Outlet />
           </div>
-          <pre className="w-[550px]">
+          <pre className="w-[550px] h-[650px] overflow-scroll bg-slate-800 text-white rounded-md shadow-md">
             <code>{code}</code>
-          </pre>   
+          </pre>
           {/* <SyntaxHighlighter language="javascript" style={docco}>
             {code}
           </SyntaxHighlighter> */}

@@ -10,8 +10,11 @@
 
 <script setup>
   import { ref } from 'vue';
+  import { useSendCode } from '../hooks/useSendCode';
   const count = ref(0);
   const updateCount = () => {
     count.value++;
   }
+
+  useSendCode('02');
 </script>

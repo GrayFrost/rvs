@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSendCode } from '../hooks/useSendCode';
 
 function Child(props) {
   const onClickFunc = () => {
@@ -22,6 +23,7 @@ export default function Chapter03() {
   const sayHello = () => {
     console.log("hello");
   };
+  useSendCode('03');
   return (
     <section>
       <h1>第三章 —— Props</h1>
