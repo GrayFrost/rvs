@@ -1,10 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
+import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
+
 import Layout from "../Layout.jsx";
 import Chapter01 from "../pages/Chapter01.jsx";
 import Chapter02 from "../pages/Chapter02.jsx";
 import Chapter03 from "../pages/Chapter03.jsx";
 import Chapter04 from "../pages/Chapter04.jsx";
-import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
+import Chapter05 from "../pages/Chapter05.jsx";
+
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "/chapter04",
         Component: Chapter04,
+      },
+      {
+        path: "/chapter05",
+        Component: Chapter05
       }
     ],
   },

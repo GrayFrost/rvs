@@ -1,9 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
+
 import Chapter01 from '../pages/Chapter01.vue';
 import Chapter02 from '../pages/Chapter02.vue';
 import Chapter03 from '../pages/Chapter03.vue';
 import Chapter04 from '../pages/Chapter04.vue';
-import { qiankunWindow } from 'vite-plugin-qiankun/dist/helper'
+import Chapter05 from '../pages/Chapter05.vue';
 
 const routes = [
   {
@@ -21,6 +23,10 @@ const routes = [
   {
     path: '/chapter04',
     component: Chapter04
+  },
+  {
+    path: '/chapter05',
+    component: Chapter05
   }
 ]
 
