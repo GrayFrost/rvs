@@ -11,6 +11,7 @@ import Chapter07 from "../pages/Chapter07.vue";
 import Chapter08 from "../pages/Chapter08.vue";
 import Chapter09 from "../pages/Chapter09.vue";
 import Chapter10 from "../pages/Chapter10.vue";
+import Chapter11 from "../pages/Chapter11.vue";
 
 const routes = [
   {
@@ -53,6 +54,10 @@ const routes = [
     path: "/chapter10",
     component: Chapter10,
   },
+  {
+    path: "/chapter11",
+    component: Chapter11,
+  }
 ];
 
 export const router = createRouter({
