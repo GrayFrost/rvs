@@ -9,6 +9,7 @@ import Chapter04 from "../pages/Chapter04.jsx";
 import Chapter05 from "../pages/Chapter05.jsx";
 import Chapter06 from "../pages/Chapter06.jsx";
 import Chapter07 from "../pages/Chapter07.jsx";
+import Chapter08 from "../pages/Chapter08.jsx";
 import Chapter09 from "../pages/Chapter09.jsx";
 import Chapter10 from "../pages/Chapter10.jsx";
 
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: "/chapter07",
         Component: Chapter07,
+      },
+      {
+        path: "/chapter08",
+        Component: Chapter08,
       },
       {
         path: "/chapter09",
