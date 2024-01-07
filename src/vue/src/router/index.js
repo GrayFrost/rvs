@@ -12,6 +12,7 @@ import Chapter08 from "../pages/Chapter08.vue";
 import Chapter09 from "../pages/Chapter09.vue";
 import Chapter10 from "../pages/Chapter10.vue";
 import Chapter11 from "../pages/Chapter11.vue";
+import Chapter12 from "../pages/Chapter12.vue";
 
 const routes = [
   {
@@ -57,6 +58,10 @@ const routes = [
   {
     path: "/chapter11",
     component: Chapter11,
+  },
+  {
+    path: "/chapter12",
+    component: Chapter12,
   }
 ];
 

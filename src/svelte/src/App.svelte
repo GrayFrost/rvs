@@ -13,7 +13,3 @@
     {/each}
   </Router>
 </main>
-
-<!-- <style src="./app.css">
-
-</style> -->

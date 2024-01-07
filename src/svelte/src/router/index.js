@@ -9,6 +9,7 @@ import Chapter08 from '../pages/Chapter08.svelte';
 import Chapter09 from '../pages/Chapter09.svelte';
 import Chapter10 from '../pages/Chapter10.svelte';
 import Chapter11 from '../pages/Chapter11.svelte';
+import Chapter12 from '../pages/Chapter12.svelte';
 
 export const routes = [
   {
@@ -54,5 +55,9 @@ export const routes = [
   {
     path: '/chapter11',
     component: Chapter11,
+  },
+  {
+    path: '/chapter12',
+    component: Chapter12,
   }
 ]

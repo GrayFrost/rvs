@@ -13,7 +13,7 @@ import Chapter08 from "../pages/Chapter08.jsx";
 import Chapter09 from "../pages/Chapter09.jsx";
 import Chapter10 from "../pages/Chapter10.jsx";
 import Chapter11 from "../pages/Chapter11.jsx";
-
+import Chapter12 from "../pages/Chapter12.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -63,6 +63,10 @@ export const router = createBrowserRouter([
       {
         path: "/chapter11",
         Component: Chapter11,
+      },
+      {
+        path: "/chapter12",
+        Component: Chapter12
       }
     ],
   },
