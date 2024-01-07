@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useLocation, useParams, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { actions } from "./qiankun/state";
 import { setCode } from "./store/code";
 import { useSelector, useDispatch } from "react-redux";
+import Navs from './components/Navs';
 import SubNavs from "./components/SubNavs";
-// import SyntaxHighlighter from "react-syntax-highlighter";
-// import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-// import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Layout() {
   const dispatch = useDispatch();
@@ -61,17 +59,7 @@ export default function Layout() {
       name: "context",
     },
   ]);
-  const params = useParams();
-
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const gotoChapter = (chapter) => {
-    const [ui] = location.pathname.split("/").filter(Boolean);
-    const newPath = `/${ui || "react"}/chapter${chapter}`;
-    navigate(newPath);
-  };
-
+  
   useEffect(() => {
     // 接收子应用数据
     actions.onGlobalStateChange((newState, prev) => {
@@ -85,21 +73,7 @@ export default function Layout() {
 
   return (
     <div className="w-full h-full flex flex-row">
-      <ul className="w-[200px] bg-neutral-800 text-white flex-shrink-0">
-        {navs.map((nav, index) => {
-          return (
-            <li
-              className={`flex w-full h-12 items-center justify-start px-4 hover:bg-orange-500 hover:text-slate-400 cursor-pointer ${
-                `chapter${nav.chapter}` == params.chapter ? "bg-orange-500" : ""
-              }`}
-              onClick={() => gotoChapter(nav.chapter)}
-              key={index}
-            >
-              {index + 1}.{nav.name}
-            </li>
-          );
-        })}
-      </ul>
+      <Navs navs={navs} />
       <div className="flex-1">
         <SubNavs />
         <div className="flex w-full">
@@ -109,9 +83,6 @@ export default function Layout() {
           <pre className="w-[550px] h-[650px] overflow-scroll bg-slate-800 text-white rounded-md shadow-md">
             <code>{code}</code>
           </pre>
-          {/* <SyntaxHighlighter language="javascript" style={docco}>
-            {code}
-          </SyntaxHighlighter> */}
         </div>
       </div>
     </div>

@@ -12,19 +12,19 @@ export default function SubNavs() {
   return (
     <div className="flex">
       <div
-        className="w-20 h-12 flex justify-center items-center rounded-sm bg-react text-white"
+        className="w-20 h-12 flex justify-center items-center rounded-sm bg-react text-white hover:cursor-pointer"
         onClick={() => gotoPage("react")}
       >
         react
       </div>
       <div
-        className="w-20 h-12 flex justify-center items-center rounded-sm bg-vue text-white"
+        className="w-20 h-12 flex justify-center items-center rounded-sm bg-vue text-white hover:cursor-pointer"
         onClick={() => gotoPage("vue")}
       >
         vue
       </div>
       <div
-        className="w-20 h-12 flex justify-center items-center rounded-sm bg-svelte text-white"
+        className="w-20 h-12 flex justify-center items-center rounded-sm bg-svelte text-white hover:cursor-pointer"
         onClick={() => gotoPage("svelte")}
       >
         svelte

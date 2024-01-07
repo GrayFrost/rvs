@@ -1,11 +1,11 @@
 # rvs
 
-## Guide
+## 背景
 
 react vue svelte语法对比
 
 
-## Start
+## 启动
 
 ```
 npm run dev // 启动基座
@@ -16,3 +16,18 @@ npm run dev // 启动vue
 cd svelte
 npm run dev // 启动svelte
 ```
+
+## 目录
+
+* state
+* function
+* props
+* lifecircle
+* slot
+* computed
+* watch
+* if
+* for
+* ref
+* style
+* context
