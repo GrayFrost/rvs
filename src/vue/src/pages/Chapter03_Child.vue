@@ -3,7 +3,7 @@
     <span>name: {{ name }}</span>
     <button
       class="w-[120px] h-10 rounded-sm flex items-center justify-center border"
-      @click="onClickFunc()"
+      @click="onClickFunc"
     >
       调用父级方法
     </button>

@@ -4,13 +4,12 @@
 <script>
   import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
-  import Child from './Chapter12_Chil1.svelte';
+  import Child from './Chapter12_Child1.svelte';
 
   let text = 'hello world';
   let theme = writable('dark');
 
   const setTheme = (newTheme) => {
-    console.log('zzh setTheme', newTheme);
     $theme = newTheme
   }
 

@@ -13,7 +13,7 @@ function _Child(props, ref) {
 }
 const Child = React.forwardRef(_Child);
 
-export default function Chapter10() {
+export default function Page() {
   const fatherRef = useRef(null);
   const childRef = useRef(null);
   const [className, setClassName] = useState("");
