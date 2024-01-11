@@ -1,1 +1,9 @@
-<div>代码测试的自由场地</div>
+<script>
+  let htmlContent = `
+  <span onclick="alert('Hello World!')">hello</span>
+  `;
+</script>
+
+<div>
+  {@html htmlContent}
+</div>

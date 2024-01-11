@@ -12,6 +12,8 @@ import Chapter10 from '../pages/Chapter10.svelte';
 import Chapter11 from '../pages/Chapter11.svelte';
 import Chapter12 from '../pages/Chapter12.svelte';
 
+import Todo from '../pages/todolist/index.svelte';
+
 export const routes = [
   {
     path: '/chapter00',
@@ -64,5 +66,9 @@ export const routes = [
   {
     path: '/chapter12',
     component: Chapter12,
+  },
+  {
+    path: '/todo',
+    component: Todo,
   }
 ]
