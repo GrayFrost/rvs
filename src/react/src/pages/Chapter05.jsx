@@ -1,3 +1,5 @@
+import { useSendCode } from '../hooks/useSendCode';
+
 function SlotContainer1(props) {
   return <div className="m-4 p-4 border rounded">{props.children}</div>;
 }
@@ -15,6 +17,7 @@ function SlotContainer2(props) {
 }
 
 export default function Page() {
+  useSendCode('05');
   return (
     <section>
       <h1>第五章 —— slot</h1>

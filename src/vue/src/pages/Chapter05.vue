@@ -13,4 +13,7 @@
 <script setup>
 import SlotContainer1 from "./Chapter05_Child1.vue";
 import SlotContainer2 from "./Chapter05_Child2.vue";
+import { useSendCode } from '../hooks/useSendCode';
+
+useSendCode('05');
 </script>

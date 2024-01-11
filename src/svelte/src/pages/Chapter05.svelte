@@ -1,6 +1,9 @@
 <script>
+  import { useSendCode } from '../hooks/useSendCode';
   import SlotContainer1 from './Chapter05_Child1.svelte';
   import SlotContainer2 from './Chapter05_Child2.svelte';
+
+  useSendCode('05');
 </script>
 
 <section>
