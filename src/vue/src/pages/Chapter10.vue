@@ -16,6 +16,8 @@
 <script setup>
 import { ref, watchEffect } from 'vue';
 import Child from './Chapter10_Child.vue';
+import { useSendCode } from '../hooks/useSendCode';
+
 const fatherRef = ref(null);
 const childRef = ref(null);
 let className = ref('');
@@ -32,4 +34,5 @@ const sayHello = () => {
   }
 }
 
+useSendCode('10');
 </script>

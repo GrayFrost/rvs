@@ -9,5 +9,8 @@
 
 <script setup>
 import { reactive } from "vue";
+import { useSendCode } from '../hooks/useSendCode';
+
 const list = reactive([1, 2, 3]);
+useSendCode('09');
 </script>

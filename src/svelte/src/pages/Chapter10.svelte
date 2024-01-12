@@ -1,5 +1,6 @@
 <script>
   import Child from "./Chapter10_Child.svelte";
+  import { useSendCode } from '../hooks/useSendCode';
 
   let fatherRef;
   let childRef;
@@ -16,6 +17,7 @@
       childRef.sayHello();
     }
   };
+  useSendCode('10');
 </script>
 
 <section>

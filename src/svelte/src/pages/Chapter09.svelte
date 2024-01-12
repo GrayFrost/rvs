@@ -1,5 +1,8 @@
 <script>
+  import { useSendCode } from '../hooks/useSendCode';
   const list = [1,2,3];
+
+  useSendCode('09');
 </script>
 
 <section>

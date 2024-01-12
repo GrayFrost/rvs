@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState, useImperativeHandle } from "react";
+import { useSendCode } from '../hooks/useSendCode';
 
 function _Child(props, ref) {
   const sayHello = () => {
@@ -29,6 +30,8 @@ export default function Page() {
       childRef.current.sayHello();
     }
   };
+
+  useSendCode('10');
 
   return (
     <section>
