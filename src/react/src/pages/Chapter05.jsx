@@ -1,7 +1,8 @@
 import { useSendCode } from '../hooks/useSendCode';
 
 function SlotContainer1(props) {
-  return <div className="m-4 p-4 border rounded">{props.children}</div>;
+  const { children } = props;
+  return <div className="m-4 p-4 border rounded">{children}</div>;
 }
 
 function SlotContainer2(props) {
