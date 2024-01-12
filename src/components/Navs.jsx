@@ -18,7 +18,7 @@ export default function Navs(props) {
         {navs.map((nav, index) => {
           return (
             <li
-              className={`flex w-full h-12 items-center justify-start px-4 hover:bg-orange-500 hover:text-white cursor-pointer ${
+              className={`flex w-full h-12 items-center justify-start px-4 hover:bg-orange-500 hover:text-white hover:cursor-pointer transition-colors duration-500 ${
                 `chapter${nav.chapter}` == params.chapter ? "bg-orange-500" : ""
               }`}
               onClick={() => gotoChapter(nav.chapter)}
