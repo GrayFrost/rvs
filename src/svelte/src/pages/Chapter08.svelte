@@ -1,9 +1,11 @@
 <script>
+  import { useSendCode } from '../hooks/useSendCode';
   let gender = '';
 
   const changeGender = (e) => {
     gender = e.target.value;
   }
+  useSendCode('08');
 </script>
 <section>
   <h1>第八章 —— if</h1>

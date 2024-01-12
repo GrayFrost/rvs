@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useSendCode } from '../hooks/useSendCode';
 
 export default function Page() {
   const [gender, setGender] = useState("");
@@ -6,6 +7,8 @@ export default function Page() {
   const changeGender = (e) => {
     setGender(e.target.value);
   };
+
+  useSendCode('08');
 
   return (
     <section>

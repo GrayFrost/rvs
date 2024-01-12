@@ -36,10 +36,13 @@
 
 <script setup>
 import { ref } from "vue";
+import { useSendCode } from '../hooks/useSendCode';
 
 const gender = ref("");
 
 const changeGender = (e) => {
   gender.value = e.target.value;
 };
+
+useSendCode('08');
 </script>
