@@ -9,7 +9,8 @@
   export const ContextKey = 'ThemeContext';
 </script>
 <script setup>
-  import { ref, provide } from 'vue'
+  import { ref, provide } from 'vue';
+  import { useSendCode } from '../hooks/useSendCode';
   import Child from './Chapter12_Child1.vue';
 
   const text = 'hello world';
@@ -23,5 +24,7 @@
     text,
     theme,
     setTheme
-  })
+  });
+
+  useSendCode('12');
 </script>

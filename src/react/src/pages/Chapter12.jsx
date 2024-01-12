@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react";
+import { useSendCode } from '../hooks/useSendCode';
 
 const ThemeContext = createContext(null);
 
@@ -31,6 +32,8 @@ const Child = () => {
 export default function Page() {
   const [text] = useState('hello world');
   const [theme, setTheme] = useState("dark");
+
+  useSendCode('12');
 
   return (
     <section>

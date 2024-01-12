@@ -43,6 +43,16 @@ import {
   vueCode as vueCode10,
   svelteCode as svelteCode10,
 } from './Chapter10';
+import {
+  reactCode as reactCode11,
+  vueCode as vueCode11,
+  svelteCode as svelteCode11,
+} from './Chapter11';
+import {
+  reactCode as reactCode12,
+  vueCode as vueCode12,
+  svelteCode as svelteCode12,
+} from './Chapter12';
 
 export const reactCodeMap = {
   '01': reactCode01,
@@ -54,6 +64,8 @@ export const reactCodeMap = {
   '08': reactCode08,
   '09': reactCode09,
   '10': reactCode10,
+  '11': reactCode11,
+  '12': reactCode12,
 }
 
 export const vueCodeMap = {
@@ -66,6 +78,8 @@ export const vueCodeMap = {
   '08': vueCode08,
   '09': vueCode09,
   '10': vueCode10,
+  '11': vueCode11,
+  '12': vueCode12,
 }
 
 export const svelteCodeMap = {
@@ -78,6 +92,8 @@ export const svelteCodeMap = {
   '08': svelteCode08,
   '09': svelteCode09,
   '10': svelteCode10,
+  '11': svelteCode11,
+  '12': svelteCode12,
 }
 
 export const codeMap = {

@@ -4,6 +4,7 @@
 <script>
   import { setContext } from 'svelte';
   import { writable } from 'svelte/store';
+  import { useSendCode } from '../hooks/useSendCode';
   import Child from './Chapter12_Child1.svelte';
 
   let text = 'hello world';
@@ -17,7 +18,9 @@
     text,
     theme,
     setTheme
-  })
+  });
+
+  useSendCode('12');
 </script>
 
 <section>

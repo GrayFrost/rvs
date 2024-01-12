@@ -1,4 +1,7 @@
+import { useSendCode } from '../hooks/useSendCode';
+
 export default function Page() {
+  useSendCode('11');
   return (
     <section>
       <h1>第十一章 —— style</h1>
