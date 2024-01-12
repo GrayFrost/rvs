@@ -22,7 +22,12 @@ import {
   reactCode as reactCode06,
   vueCode as vueCode06,
   svelteCode as svelteCode06,
-} from './Chapter05';
+} from './Chapter06';
+import {
+  reactCode as reactCode07,
+  vueCode as vueCode07,
+  svelteCode as svelteCode07,
+} from './Chapter07';
 
 export const reactCodeMap = {
   '01': reactCode01,
@@ -30,6 +35,7 @@ export const reactCodeMap = {
   '03': reactCode03,
   '05': reactCode05,
   '06': reactCode06,
+  '07': reactCode07,
 }
 
 export const vueCodeMap = {
@@ -38,6 +44,7 @@ export const vueCodeMap = {
   '03': vueCode03,
   '05': vueCode05,
   '06': vueCode06,
+  '07': vueCode07,
 }
 
 export const svelteCodeMap = {
@@ -46,6 +53,7 @@ export const svelteCodeMap = {
   '03': svelteCode03,
   '05': svelteCode05,
   '06': svelteCode06,
+  '07': svelteCode07,
 }
 
 export const codeMap = {

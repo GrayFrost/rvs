@@ -1,4 +1,5 @@
 <script>
+  import { useSendCode } from '../hooks/useSendCode';
   let count = 0;
   let oldCount = count;
   
@@ -10,6 +11,8 @@
   const updateCount = () => {
     count++;
   }
+
+  useSendCode('07')
 </script>
 
 <section>

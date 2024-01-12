@@ -8,6 +8,7 @@
 
 <script setup>
 import { watch, ref } from "vue";
+import { useSendCode } from '../hooks/useSendCode';
 
 let count = ref(0);
 
@@ -21,4 +22,6 @@ watch(
     console.log("count改变了");
   }
 );
+
+useSendCode('07');
 </script>

@@ -1,4 +1,6 @@
 <script>
+  import { useSendCode } from '../hooks/useSendCode';
+
   let count = 0;
 
   $: doubleCount = count * 2;
@@ -6,6 +8,8 @@
   const updateCount = () => {
     count++;
   };
+
+  useSendCode('06');
 </script>
 
 <section>

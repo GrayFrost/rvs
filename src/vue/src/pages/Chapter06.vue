@@ -15,6 +15,7 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { useSendCode } from '../hooks/useSendCode';
 
 let count = ref(0);
 let doubleCount = computed(() => {
@@ -24,4 +25,6 @@ let doubleCount = computed(() => {
 const updateCount = () => {
   count.value++;
 }
+
+useSendCode('06');
 </script>

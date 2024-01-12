@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useSendCode } from '../hooks/useSendCode';
 
 export default function Page() {
   const [count, setCount] = useState(0);
@@ -10,6 +11,8 @@ export default function Page() {
   const updateCount = () => {
     setCount(count + 1);
   }
+
+  useSendCode('07');
 
   return (
     <section>
