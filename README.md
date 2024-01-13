@@ -4,7 +4,6 @@
 
 react vue svelte语法对比
 
-
 ## 启动
 
 ```
@@ -16,6 +15,8 @@ npm run dev // 启动vue
 cd svelte
 npm run dev // 启动svelte
 ```
+
+`<video src="./public/video.rvs.mov" />`
 
 ## 目录
 
@@ -31,3 +32,8 @@ npm run dev // 启动svelte
 * ref
 * style
 * context
+
+## Todo
+
+- [ ] Angular
+- [ ] 页面样式
