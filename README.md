@@ -16,7 +16,7 @@ cd svelte
 npm run dev // start svelte micro app
 ```
 
-![Demo]()
+![img](https://github.com/GrayFrost/rvs/blob/main/public/rvs.gif)
 
 ## Chapter
 
