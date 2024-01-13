@@ -6,7 +6,7 @@ How to use same function by writing different code in react, vue and svelte.
 
 ## Start
 
-```
+```shell
 npm run dev // base app
 cd react
 npm run dev // start react micro app
@@ -29,7 +29,6 @@ npm run dev // start svelte micro app
 * watch
 * if
 * for
-* 
 * ref
 * style
 * context
