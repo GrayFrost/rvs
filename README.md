@@ -1,24 +1,24 @@
 # rvs
 
-## 背景
+## Background
 
-react vue svelte语法对比
+How to use same function by writing different code in react, vue and svelte.
 
-## 启动
+## Start
 
 ```
-npm run dev // 启动基座
+npm run dev // base app
 cd react
-npm run dev // 启动react
+npm run dev // start react micro app
 cd vue
-npm run dev // 启动vue
+npm run dev // start vue micro app
 cd svelte
-npm run dev // 启动svelte
+npm run dev // start svelte micro app
 ```
 
-`<video src="https://github.com/GrayFrost/rvs/blob/main/public/video/rvs.mov"></video>`
+![Demo]()
 
-## 目录
+## Chapter
 
 * state
 * function
@@ -37,4 +37,4 @@ npm run dev // 启动svelte
 ## Todo
 
 - [ ] Angular
-- [ ] 页面样式
+- [ ] pages' style
