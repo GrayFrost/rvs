@@ -3,6 +3,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from '../Layout.jsx';
+
 import ReactPage from '../pages/React.jsx';
 import VuePage from '../pages/Vue.jsx';
 import SveltePage from '../pages/Svelte.jsx';
@@ -15,6 +16,7 @@ export const router = createBrowserRouter([
       {
         path: 'react/:chapter',
         Component: ReactPage,
+        index: true
       },
       {
         path: 'vue/:chapter',

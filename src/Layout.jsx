@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate, useLocation } from "react-router-dom";
 import { actions } from "./qiankun/state";
 import { setCode } from "./store/code";
 import { useSelector, useDispatch } from "react-redux";
-import Navs from './components/Navs';
+import Navs from "./components/Navs";
 import SubNavs from "./components/SubNavs";
 
 export default function Layout() {
@@ -31,20 +31,20 @@ export default function Layout() {
       name: "slot",
     },
     {
-      chapter: '06',
-      name: "computed"
+      chapter: "06",
+      name: "computed",
     },
     {
-      chapter: '07',
-      name: 'watch',
+      chapter: "07",
+      name: "watch",
     },
     {
-      chapter: '08',
-      name: 'if'
+      chapter: "08",
+      name: "if",
     },
     {
-      chapter: '09',
-      name: 'for'
+      chapter: "09",
+      name: "for",
     },
     {
       chapter: "10",
@@ -59,7 +59,10 @@ export default function Layout() {
       name: "context",
     },
   ]);
-  
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
     // 接收子应用数据
     actions.onGlobalStateChange((newState, prev) => {
@@ -71,13 +74,20 @@ export default function Layout() {
     };
   }, []);
 
+  // redirect
+  useEffect(() => {
+    if (location.pathname === "/") {
+      navigate(`/react/chapter01`);
+    }
+  }, [location.pathname]);
+
   return (
     <div className="w-full h-full flex flex-row">
       <Navs navs={navs} />
       <div className="flex-1">
         <SubNavs />
         <div className="flex w-full">
-          <div className="flex-1">
+          <div className="flex-1 p-4">
             <Outlet />
           </div>
           <pre className="w-[550px] h-[650px] overflow-scroll bg-slate-800 text-white rounded-md shadow-md">

@@ -1,15 +1,15 @@
-import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useChapter } from '../hooks';
 
 export default function Navs(props) {
   const params = useParams();
   const navigate = useNavigate();
-  const location = useLocation();
+  const [ui] = useChapter();
 
   const { navs } = props;
 
   const gotoChapter = (chapter) => {
-    const [ui] = location.pathname.split("/").filter(Boolean);
-    const newPath = `/${ui || "react"}/chapter${chapter}`;
+    const newPath = `/${ui}/${chapter}`;
     navigate(newPath);
   };
 
@@ -21,7 +21,7 @@ export default function Navs(props) {
               className={`flex w-full h-12 items-center justify-start px-4 hover:bg-orange-500 hover:text-white hover:cursor-pointer transition-colors duration-500 ${
                 `chapter${nav.chapter}` == params.chapter ? "bg-orange-500" : ""
               }`}
-              onClick={() => gotoChapter(nav.chapter)}
+              onClick={() => gotoChapter(`chapter${nav.chapter}`)}
               key={index}
             >
               {index + 1}.{nav.name}

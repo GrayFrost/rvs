@@ -10,7 +10,7 @@ export default function SubNavs() {
     navigate(newPath);
   };
   return (
-    <div className="flex">
+    <div className="flex mx-4">
       <div
         className="w-20 h-12 flex justify-center items-center rounded-sm bg-react text-white mr-4 hover:cursor-pointer hover:shadow-lg"
         onClick={() => gotoPage("react")}
