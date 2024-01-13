@@ -16,7 +16,7 @@ cd svelte
 npm run dev // 启动svelte
 ```
 
-`<video src="./public/video.rvs.mov" />`
+`<video src="https://github.com/GrayFrost/rvs/blob/main/public/video/rvs.mov"></video>`
 
 ## 目录
 
