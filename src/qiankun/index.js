@@ -25,7 +25,7 @@ export function registerApps() {
   }
 
   start({
-    prefetch: false
+    prefetch: 'all'
   });
 }
 
