@@ -27,5 +27,14 @@ export const apps = [
     props: {
       setGlobalState: actions.setGlobalState
     }
+  },
+  {
+    name: 'solid',
+    entry: '//localhost:5004',
+    container: '#solid-app',
+    activeRule: '/solid',
+    props: {
+      setGlobalState: actions.setGlobalState
+    }
   }
 ]

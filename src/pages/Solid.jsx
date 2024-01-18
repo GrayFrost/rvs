@@ -1,9 +1,9 @@
 import React from 'react';
 
-function SolidPage() {
+function ReactPage() {
   return (
     <div id="solid-app">
     </div>
   );
 };
-export default SolidPage;
+export default ReactPage;

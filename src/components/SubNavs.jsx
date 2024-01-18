@@ -24,10 +24,16 @@ export default function SubNavs() {
         vue
       </div>
       <div
-        className="w-20 h-12 flex justify-center items-center rounded-sm bg-svelte text-white hover:cursor-pointer hover:shadow-lg"
+        className="w-20 h-12 flex justify-center items-center rounded-sm bg-svelte text-white mr-4 hover:cursor-pointer hover:shadow-lg"
         onClick={() => gotoPage("svelte")}
       >
         svelte
+      </div>
+      <div
+        className="w-20 h-12 flex justify-center items-center rounded-sm bg-solid text-white hover:cursor-pointer hover:shadow-lg"
+        onClick={() => gotoPage("solid")}
+      >
+        solid
       </div>
     </div>
   );

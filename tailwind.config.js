@@ -6,7 +6,8 @@ export default {
       colors: {
         'react': '#61dafb',
         'vue': '#42b883',
-        'svelte': '#ff4000'
+        'svelte': '#ff4000',
+        'solid': '#446b9e'
       }
     },
   },

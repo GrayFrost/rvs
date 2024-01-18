@@ -1,15 +1,15 @@
-import { createSignal } from 'solid-js'
+import { Router } from "@solidjs/router";
+import { routes } from "./router";
+import { qiankunWindow } from "vite-plugin-qiankun/dist/helper";
 
 function App() {
-  const [count, setCount] = createSignal(0)
-
   return (
-    <>
-      <div className='text-solid'>
-        hello solid
-      </div>
-    </>
-  )
+    <div className="text-solid">
+      <Router base={qiankunWindow.__POWERED_BY_QIANKUN__ ? "/solid" : ""}>
+        {routes}
+      </Router>
+    </div>
+  );
 }
 
-export default App
+export default App;
