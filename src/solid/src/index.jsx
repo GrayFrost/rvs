@@ -28,4 +28,4 @@ const initQianKun = () => {
 
 qiankunWindow.__POWERED_BY_QIANKUN__
   ? initQianKun()
-  : render(() => <App />, document.getElementById("root"));
+  : renderFunc(document.getElementById("root"));
