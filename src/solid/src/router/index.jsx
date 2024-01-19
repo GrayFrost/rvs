@@ -8,5 +8,9 @@ export const routes = [
   {
     path: '/chapter02',
     component: lazy(() => import("../pages/Chapter02")),
+  },
+  {
+    path: '/chapter03',
+    component: lazy(() => import("../pages/Chapter03")),
   }
 ]

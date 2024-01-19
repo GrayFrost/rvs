@@ -8,6 +8,7 @@ import {
   reactCode as reactCode02,
   vueCode as vueCode02,
   svelteCode as svelteCode02,
+  solidCode as solidCode02,
 } from './Chapter02';
 import {
   reactCode as reactCode03,
@@ -107,6 +108,7 @@ export const svelteCodeMap = {
 
 export const solidCodeMap = {
   '01': solidCode01,
+  '02': solidCode02,
 }
 
 export const codeMap = {

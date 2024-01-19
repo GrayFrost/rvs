@@ -1,4 +1,5 @@
 import { createSignal } from "solid-js";
+import { useSendCode } from '../hooks/useSendCode';
 
 export default function Page() {
   const [count, setCount] = createSignal(0);
@@ -6,6 +7,8 @@ export default function Page() {
   const updateCount = () => {
     setCount(count() + 1);
   };
+
+  useSendCode('02');
 
   return (
     <section>
