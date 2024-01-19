@@ -2,6 +2,7 @@ import {
   reactCode as reactCode01,
   vueCode as vueCode01,
   svelteCode as svelteCode01,
+  solidCode as solidCode01,
 } from './Chapter01';
 import {
   reactCode as reactCode02,
@@ -104,8 +105,13 @@ export const svelteCodeMap = {
   '12': svelteCode12,
 }
 
+export const solidCodeMap = {
+  '01': solidCode01,
+}
+
 export const codeMap = {
   'react': reactCodeMap,
   'vue': vueCodeMap,
   'svelte': svelteCodeMap,
+  'solid': solidCodeMap,
 }
